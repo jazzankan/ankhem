@@ -5,82 +5,57 @@
 @endsection
 
 @section('content')
-    <section class="section">
-        <div class="container">
+    <div class="container">
             <h1 class="title">Registrera dig i Ankhemmet!</h1>
-            <form>
+            <form class="control" action="" method="post">
                 @csrf
                     <div class="field">
-                        <label class="label">Namn</label>
+                        <label class="label">Förnamn</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input">
+                            <input class="input" type="text" name="firstname" autofocus placeholder="Förnamn">
                         </div>
                     </div>
-                        <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                <div class="field">
+                    <label class="label">Efternamn</label>
+                    <div class="control">
+                        <input class="input" type="text" name="lastname" placeholder="Efternamn">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">E-postadress</label>
+                    <div class="control has-icons-left">
+                            <input class="input" type="email" name="email" placeholder="E-post">
                             <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
                     </span>
-                            <span class="icon is-small is-right">
-                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Lösenord</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="password" name="password">
+                        <span class="icon is-small is-left">
+                      <i class="fas fa-key"></i>
                     </span>
-                        </div>
-                        <p class="help is-danger">This email is invalid</p>
                     </div>
-
-                    <div class="field">
-                        <label class="label">Subject</label>
-                        <div class="control">
-                            <div class="select">
-                                <select>
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">Message</label>
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Textarea"></textarea>
-                        </div>
-                    </div>
+                </div>
 
                     <div class="field">
                         <div class="control">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                I agree to the <a href="#">terms and conditions</a>
+                            <label class="checkbox" style="margin-top:30px">
+                                <input type="checkbox" name="check" value="agree">
+                                Jag medger att mina personuppgifter sparas och hanteras enligt  <a href="#">dessa villkor.</a>
                             </label>
                         </div>
                     </div>
 
                     <div class="field">
                         <div class="control">
-                            <label class="radio">
-                                <input type="radio" name="question">
-                                Yes
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="question">
-                                No
-                            </label>
+                            <button class="button is-link">Skicka</button>
                         </div>
                     </div>
-
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <button class="button is-link">Submit</button>
-                        </div>
-                        <div class="control">
-                            <button class="button is-text">Cancel</button>
-                        </div>
-                    </div>
+                <p>&nbsp;</p>
             </form>
-        </div>
-    </section>
+    </div>
 
 @endsection

@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/auth/register', function () {
     return view('/auth/register');
 });
+
+Route::post('/auth/register', 'Auth\RegisterController@create');
+
